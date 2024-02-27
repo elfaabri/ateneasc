@@ -57,25 +57,45 @@ a {
   z-index: 2;
   position: relative;
   background: var(--melon);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   width: 90px;
+  order: 1;
 }
 
 .menu {
   padding: 15px 5px;
   display: flex;
-  order: 3;
+  order: 2;
   width: 100%;
   flex-direction: column;
   gap: 30px;
-  transform: translateX(200%);
   transition: all 0.5s ease-in-out;
   position: absolute;
   top: 75px;
   left: 0;
   background: var(--melon);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar i {
+  font-size: 26px;
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
 }
 
 .menu li {
@@ -96,6 +116,7 @@ a {
   border-radius: 10px;
   background: var(--melon);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  order: 0;
 }
 
 .btn {
@@ -109,6 +130,8 @@ a {
 .show {
   transform: translateX(0);
 }
+
+
 
 /* Section 1 - Hero */
 .hero {
@@ -315,9 +338,6 @@ a {
 .cta {
   padding: 4rem 0;
   background: var(--secondary-bg);
-  /* background-color: red; */
-  /* width: 100vw; */
-  /* margin: 0 auto; */
 }
 
 .cta-card-container {
@@ -412,8 +432,6 @@ footer {
     color: white;
     transition: all 0.3s ease-in-out;
   }
-
-
 
   /* Section 1 => Hero */
 
@@ -544,6 +562,29 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .navbar ul { /* Estila todo el navbar ul y lo hace desaparecer */
+    background-color: #eccfc3;
+    width: 100%;
+    height: calc(100vh-80px);
+    position: absolute;
+    top: 110px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all 0.4s;
+  }
+
+
+  .navbar i {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .menu {
+    display: flex;
   }
 
 }
