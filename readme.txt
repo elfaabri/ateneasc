@@ -9,7 +9,7 @@ Requisitos de aprobación del integrador
 v. Todo en HTML y CSS.
 v. Click en navbar y te lleve a las secciones.
 v. Seccion hero relacionada a la tematica.
-4. Seccion about us / beneficios que tenga info relacionada a la tematica.
+v. Seccion about us / beneficios que tenga info relacionada a la tematica.
 v. Seccion de cards con imagenes (producto o informacion / si es producto, titulo precio y boton de compra)
 6. Seccion de contacto; formulario de contacto, con su informacion y localizacion de la pagina, iframe con un mapa.
 v. Footer.
@@ -30,3 +30,4 @@ Ideas extras para sumar
 8. algun fondo animado? animatedbackground.me
 9. pasar la pagina por css code quality
 10. css only image slider?
+11. sumale al final una parte de contacto con el formulario para que complete el punto 6. 

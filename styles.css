@@ -60,6 +60,16 @@ a {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+.logoName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logoName p {
+  font-size: 1.5rem;
+}
+
 .logo {
   width: 90px;
   order: -1;
@@ -79,14 +89,16 @@ a {
   background: var(--melon);
 }
 
+/* esta linea del señor es la que permite que desaparezca la label del navbar */
+
+.navbar label {
+  display: none;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 80px;
-}
-
-.navbar {
-  display: flex;
 }
 
 .navbar i {
