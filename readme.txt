@@ -17,3 +17,16 @@ v. Footer.
 9. Responsive, adaptable a dispositivos y burguer menu.
 v. No lorem.
 11. Entrega github y vercel.
+
+Ideas extras para sumar
+
+1. "registrate para obtener codigos de descuento en nuestras rutinas y capacitaciones gratuitas sobre skincare!"
+2. newsletter para recibir novedades y promociones con casillas de mail y nombre
+3.cambiar el boton de login por el de la personita no logueada, cdo lo apretas que vaya a la pagina de login o registro
+4. animacion en el scroll
+5. revisar la pagina con cool contrast app /ui colors app
+6. usar las mq con mayor y menor en 1 sola linea
+7. tooltip para lo que haga falta
+8. algun fondo animado? animatedbackground.me
+9. pasar la pagina por css code quality
+10. css only image slider?
