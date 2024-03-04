@@ -1,8 +1,7 @@
 Problemas conocidos
 
-1. el navbar no esta bien centrado porque tengo el icono del burguer menu haciendo cualquiera; para que funcione el burguer menu tuve que mover de lugar los elementos del html para poder usar el checked con la funcion "~" y luego reacomodarlos con "order" en css.
-2. el diseño que tiene es adaptive, pero no responsive.
-3. ???
+1. el diseño que tiene es adaptive, pero no responsive.
+2. ???
 
 Requisitos de aprobación del integrador
 
@@ -26,8 +25,9 @@ Ideas extras para sumar
 4. animacion en el scroll
 5. revisar la pagina con cool contrast app /ui colors app
 6. usar las mq con mayor y menor en 1 sola linea
-7. tooltip para lo que haga falta
 8. algun fondo animado? animatedbackground.me
 9. pasar la pagina por css code quality
 10. css only image slider?
 11. sumale al final una parte de contacto con el formulario para que complete el punto 6. 
+12. meterle un hover con zoom a las cards de los testimonios.
+13. dale borde a la derecha al boton de login
