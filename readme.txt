@@ -1,7 +1,6 @@
 Problemas conocidos
 
-1. el diseño que tiene es adaptive, pero no responsive.
-2. ???
+1. ???
 
 Requisitos de aprobación del integrador
 
@@ -30,4 +29,3 @@ Ideas extras para sumar
 10. css only image slider?
 11. sumale al final una parte de contacto con el formulario para que complete el punto 6. 
 12. meterle un hover con zoom a las cards de los testimonios.
-13. dale borde a la derecha al boton de login

@@ -50,6 +50,8 @@ a {
 /* Navbar */
 .navbar {
   display: flex;
+  /* el height del navbar ocupa 16vh en una cantidad relativa */
+  height: 16vh;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -64,10 +66,13 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
+  left: 1.2rem;
 }
 
 .logoName p {
   font-size: 1.5rem;
+  padding: 0.6rem;
 }
 
 .logo {
@@ -75,18 +80,13 @@ a {
   order: -1;
 }
 
-.menu {
-  padding: 15px 5px;
-  display: flex;
-  order: 2;
-  width: 100%;
-  flex-direction: column;
-  gap: 30px;
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  top: 75px;
-  left: 0;
-  background: var(--melon);
+.navbar .menu {
+  gap: 100px;
+  font-size: 1.2rem;
+}
+
+.loginMenu {
+  display: none;
 }
 
 /* esta linea del señor es la que permite que desaparezca la label del navbar */
@@ -98,7 +98,8 @@ a {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 80px;
+  gap: 30px;
+  padding: 8px;
 }
 
 .navbar i {
@@ -112,7 +113,9 @@ a {
   border-radius: 50%;
   padding: 0.6rem;
   border-style: double;
-  /* dale borde a la derecha; */
+  position: relative;
+  right: 1.4rem;
+  transition: all 0.6s ease-in-out;
 }
 
 #toggle-menu {
@@ -456,7 +459,6 @@ footer {
   #userLogin:hover {
     background: #7a512f;
     color: white;
-    transition: all 0.4s ease-in-out;
   }
 
   /* Section 1 => Hero */
@@ -561,7 +563,7 @@ footer {
 }
 
 /* Media */
-@media (max-width: 999px) {
+@media (max-width: 1025px) {
 
   .hero{
     display: flex;
@@ -593,9 +595,9 @@ footer {
   .navbar ul { /* Estila todo el navbar ul y lo hace desaparecer */
     background-color: #eccfc3;
     width: 100%;
-    height: calc(100vh-80px);
     position: absolute;
-    top: 110px;
+    /* este top es el problema del espacio entre el navbar y el hero */
+    top: 16vh;
     left: 0;
     flex-direction: column;
     align-items: center;
@@ -617,4 +619,60 @@ footer {
     order: -1;
   }
 
+  .navbar label {
+    display: flex;
+    order: 1;
+    position: relative;
+    right: 20px;
+  }
+
+  .loginMenu {
+    display: flex;
+  }
+
+  #userLogin {
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+/* Navbar */
+
+.logoName p {
+  font-size: calc(2vw + .7em);
+}
+
+.logo {
+  width: calc(15vw + .7em);
+}
+
+}
+
+@media (max-width: 426px) {
+
+/* Navbar */
+
+.menu {
+  gap: 0px;
+  padding: 0px;
+  /* margin: 0; */
+}
+
+.logo {
+  position: relative;
+  right: 26px;
+}
+
+.logoName p {
+  position: relative;
+  right: 32px;
+}
+
+.navbar i {
+  position: relative;
+  left: 16px;
+}
+  
 }
