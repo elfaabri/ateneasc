@@ -139,7 +139,8 @@ a {
   right: 1rem;
   border-radius: 10px;
   background: var(--melon);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .btn {
@@ -147,14 +148,13 @@ a {
   padding: 0.8rem 1.8rem;
   border-radius: 10px;
   background: var(--melon);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .show {
   transform: translateX(0);
 }
-
-
 
 /* Section 1 - Hero */
 .hero {
@@ -197,7 +197,8 @@ a {
   border: none;
   padding: 20px 40px;
   border-radius: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 /* Section 2 - Products */
@@ -407,6 +408,88 @@ footer {
   color: white;
 }
 
+/* Sección 6 - Contacto */
+
+.contact {
+  border-bottom: 2px solid white;
+}
+
+.contactbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem;
+}
+
+.contactinfo h3 {
+  font-size: 2.2rem;
+  color: var(--light-text);
+}
+
+.inputbox input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 35px 0 5px;
+  color: var(--gray);
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  top: 20px;
+}
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  max-width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+.contact button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.contact button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+iframe  {
+  border-radius: 2rem;
+}
+
 /* Media */
 @media (min-width: 1000px) {
   /* Header */
@@ -557,42 +640,42 @@ footer {
     padding: 10px 0;
   }
 
-  .footer-nav-container li{
+  .footer-nav-container li {
     padding: 4px;
   }
 }
 
 /* Media */
 @media (max-width: 1025px) {
-
-  .hero{
+  .hero {
     display: flex;
     flex-direction: column;
   }
 
-  .foto-hero{
+  .foto-hero {
     min-width: 250px;
     max-height: 400px;
   }
 
-  .product-img{
+  .product-img {
     min-width: 250px;
     max-height: 400px;
   }
 
-  .about-text{
+  .about-text {
     display: flex;
     justify-content: center;
     text-align: center;
   }
 
-  .product-card{
+  .product-card {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .navbar ul { /* Estila todo el navbar ul y lo hace desaparecer */
+  .navbar ul {
+    /* Estila todo el navbar ul y lo hace desaparecer */
     background-color: #eccfc3;
     width: 100%;
     position: absolute;
@@ -606,7 +689,6 @@ footer {
     transition: all 0.4s;
   }
 
-
   .navbar i {
     display: block;
   }
@@ -614,8 +696,8 @@ footer {
   #toggle-menu:checked ~ .menu {
     display: flex;
   }
-  
-  .btn-login { 
+
+  .btn-login {
     order: -1;
   }
 
@@ -634,45 +716,59 @@ footer {
     display: none;
   }
 
+  .contactbox {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) {
+  /* Navbar */
 
-/* Navbar */
+  .logoName p {
+    font-size: calc(2vw + 0.7em);
+  }
 
-.logoName p {
-  font-size: calc(2vw + .7em);
-}
-
-.logo {
-  width: calc(15vw + .7em);
-}
-
+  .logo {
+    width: calc(15vw + 0.7em);
+  }
 }
 
 @media (max-width: 426px) {
+  /* Navbar */
 
-/* Navbar */
+  .menu {
+    gap: 0px;
+    padding: 0px;
+    /* margin: 0; */
+  }
 
-.menu {
-  gap: 0px;
-  padding: 0px;
-  /* margin: 0; */
-}
+  .logo {
+    position: relative;
+    right: 26px;
+  }
 
-.logo {
-  position: relative;
-  right: 26px;
-}
+  .logoName p {
+    position: relative;
+    right: 32px;
+  }
 
-.logoName p {
-  position: relative;
-  right: 32px;
-}
+  .navbar i {
+    position: relative;
+    left: 16px;
+  }
 
-.navbar i {
-  position: relative;
-  left: 16px;
-}
-  
+  .contactbox {
+    flex-direction: column;
+  }
+
+  .contactinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  iframe {
+    max-width: 380px;
+  }
 }
