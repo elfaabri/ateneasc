@@ -48,6 +48,7 @@ a {
 }
 
 /* Navbar */
+
 .navbar {
   display: flex;
   /* el height del navbar ocupa 16vh en una cantidad relativa */
@@ -156,7 +157,8 @@ a {
   transform: translateX(0);
 }
 
-/* Section 1 - Hero */
+/* Sección 1 Inicio */
+
 .hero {
   display: flex;
   align-items: center;
@@ -201,7 +203,8 @@ a {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-/* Section 2 - Products */
+/* Sección 2 Beneficios */
+
 .product {
   display: flex;
   flex-direction: column;
@@ -258,7 +261,8 @@ a {
   gap: 20px;
 }
 
-/* Section 3 => About */
+/* Sección 3 Mi rutina */
+
 .about {
   display: flex;
   flex-direction: column;
@@ -304,7 +308,7 @@ a {
 
 .about-card:first-child {
   gap: 20px;
-  padding: 3rem 2rem 1rem;
+  padding: 3rem 2rem 2rem;
 }
 
 .about-card:last-child {
@@ -315,7 +319,8 @@ a {
   margin: 20px 0;
 }
 
-/* Section 4 => Testimonials */
+/* Sección 4 Testimonios */
+
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -358,7 +363,8 @@ a {
   border-radius: 1rem;
 }
 
-/* Section 5 => CTA */
+/* Sección 5 CTA */
+
 .cta {
   padding: 4rem 0;
   background: var(--secondary-bg);
@@ -388,27 +394,7 @@ a {
   display: none;
 }
 
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  max-width: fit-content;
-  gap: 20px;
-  padding: 3rem 0;
-  margin: 0 auto;
-}
-
-.redes-nav {
-  display: flex;
-  gap: 20px;
-}
-
-.btn:hover {
-  background: #582e58;
-  color: white;
-}
-
-/* Sección 6 - Contacto */
+/* Sección 6 Contacto */
 
 .contact {
   border-bottom: 2px solid white;
@@ -490,8 +476,222 @@ iframe  {
   border-radius: 2rem;
 }
 
-/* Media */
-@media (min-width: 1000px) {
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding: 3rem 0;
+  margin: 0 auto;
+}
+
+.redes-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.btn:hover {
+  background: #582e58;
+  color: white;
+}
+
+.iconbox {
+  margin: 0px 0;
+  font-size: 0.85rem;
+  color: var(--gray);
+  display: flex;
+  justify-content: center;
+}
+
+.iconbox label {
+  display: flex;
+  align-items: center;
+}
+
+.iconbox label input {
+  margin-right: 3px;
+}
+
+.iconbox a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.iconbox a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+  top: 2.6rem;
+}
+
+.icons i {
+  font-size: 1.8rem;
+  transition: all 0.4s ease;
+}
+
+.icons i:first-child:hover {
+  color: rgb(17, 0, 255);
+}
+.icons i:nth-child(2):hover {
+  color: rgb(113, 238, 82);
+}
+.icons i:last-child:hover {
+  color: rgb(255, 81, 0);
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+.phoneNumber {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  position: relative;
+  top: 1rem;
+}
+
+/* Media Q */
+
+@media (0px <= width <= 426px) {
+  /* Navbar */
+
+  .menu {
+    gap: 0px;
+    padding: 0px;
+    /* margin: 0; */
+  }
+
+  .logo {
+    position: relative;
+    right: 26px;
+  }
+
+  .logoName p {
+    position: relative;
+    right: 32px;
+  }
+
+  .navbar i {
+    position: relative;
+    left: 16px;
+  }
+
+  .contactbox {
+    flex-direction: column;
+  }
+
+  .contactinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  iframe {
+    max-width: 380px;
+  }
+}
+
+@media (427px <= width <= 1439px) {
+  /* Navbar */
+
+  .logoName p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .logo {
+    width: clamp(6rem, 12vw, 7.4rem);
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foto-hero {
+    min-width: 250px;
+    max-height: 400px;
+  }
+
+  .product-img {
+    min-width: 250px;
+    max-height: 400px;
+  }
+
+  .about-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar ul {
+    /* Estila todo el navbar ul y lo hace desaparecer */
+    background-color: #eccfc3;
+    width: 100%;
+    position: absolute;
+    /* este top es el problema del espacio entre el navbar y el hero */
+    top: 16vh;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all 0.4s;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .menu {
+    display: flex;
+  }
+
+  .btn-login {
+    order: -1;
+  }
+
+  .navbar label {
+    display: flex;
+    order: 1;
+    position: relative;
+    right: 20px;
+  }
+
+  .loginMenu {
+    display: flex;
+  }
+
+  #userLogin {
+    display: none;
+  }
+
+  .contactbox {
+    flex-direction: column;
+  }
+
+  iframe {
+    max-width: 380px;
+  }
+}
+
+@media (1440px <= width) {
+
   /* Header */
 
   #btn-menu {
@@ -627,7 +827,7 @@ iframe  {
 
   footer {
     flex-direction: row;
-    gap: 50px;
+    gap: 8rem;
   }
 
   .footer-nav-container h3 {
@@ -642,133 +842,5 @@ iframe  {
 
   .footer-nav-container li {
     padding: 4px;
-  }
-}
-
-/* Media */
-@media (max-width: 1025px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .foto-hero {
-    min-width: 250px;
-    max-height: 400px;
-  }
-
-  .product-img {
-    min-width: 250px;
-    max-height: 400px;
-  }
-
-  .about-text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar ul {
-    /* Estila todo el navbar ul y lo hace desaparecer */
-    background-color: #eccfc3;
-    width: 100%;
-    position: absolute;
-    /* este top es el problema del espacio entre el navbar y el hero */
-    top: 16vh;
-    left: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    transition: all 0.4s;
-  }
-
-  .navbar i {
-    display: block;
-  }
-
-  #toggle-menu:checked ~ .menu {
-    display: flex;
-  }
-
-  .btn-login {
-    order: -1;
-  }
-
-  .navbar label {
-    display: flex;
-    order: 1;
-    position: relative;
-    right: 20px;
-  }
-
-  .loginMenu {
-    display: flex;
-  }
-
-  #userLogin {
-    display: none;
-  }
-
-  .contactbox {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Navbar */
-
-  .logoName p {
-    font-size: calc(2vw + 0.7em);
-  }
-
-  .logo {
-    width: calc(15vw + 0.7em);
-  }
-}
-
-@media (max-width: 426px) {
-  /* Navbar */
-
-  .menu {
-    gap: 0px;
-    padding: 0px;
-    /* margin: 0; */
-  }
-
-  .logo {
-    position: relative;
-    right: 26px;
-  }
-
-  .logoName p {
-    position: relative;
-    right: 32px;
-  }
-
-  .navbar i {
-    position: relative;
-    left: 16px;
-  }
-
-  .contactbox {
-    flex-direction: column;
-  }
-
-  .contactinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  iframe {
-    max-width: 380px;
   }
 }
